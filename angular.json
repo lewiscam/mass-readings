@@ -32,7 +32,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              {
+            "glob": "romcal.bundle.min.js",
+            "input": "node_modules/romcal/dist/",
+            "output": "assets/romcal/"
+          }
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",

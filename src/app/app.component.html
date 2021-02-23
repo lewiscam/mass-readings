@@ -1,8 +1,22 @@
-<h1> {{ title }} </h1>
-<nav>
-  <ul>
-    <li><a routerLink="/today" routerLinkActive="active">Today's Readings</a></li>
-    <li><a routerLink="/sunday" routerLinkActive="active">Sunday's Readings</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<mat-toolbar>
+  <button (click)="drawer.toggle()" mat-icon-button aria-label="menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/today" routerLinkActive="active">Today's Readings</a>
+      <a mat-list-item routerLink="/sunday" routerLinkActive="active">Sunday's Readings</a>
+      <a mat-list-item routerLink="/order-of-the-mass" routerLinkActive="active">Order of the Mass</a>
+    </mat-nav-list>
+  </mat-drawer>
+
+    <section class="main-content">
+    <img class='icon' src='assets/icons/ash-cross.png' />
+      <router-outlet></router-outlet>
+    </section>
+
+</mat-drawer-container>

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
@@ -7,8 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Daily Mass Readings';
+  showFiller = false;
 
-  constructor(private http: HttpClient) {
-    this.http.get('https://universalis.com/USA/20210216/jsonpmass.js').subscribe(data => console.log(data))
-  }
+  constructor() { }
 }

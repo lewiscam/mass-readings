@@ -1,27 +1,63 @@
-<p id='UniversalisSunday_date'></p>
-<h2 id='UniversalisSunday_day'></h2>
-<mat-divider></mat-divider>
-<h3 id='UniversalisSunday_Mass_R1.heading'></h3>
-<p id='UniversalisSunday_Mass_R1.source'></p>
-<mat-divider></mat-divider>
+<app-calendar [day]='nextSunday'></app-calendar>
+
+<header class='section-header'>
+    <h3 class='mat-title section-title'>First Reading</h3>
+    <span class='verse' id='UniversalisSunday_Mass_R1.source'></span>
+</header>
+
 <p id='UniversalisSunday_Mass_R1.text'></p>
 
-<p id='UniversalisSunday_Mass_Ps.source'></p>
-<mat-divider></mat-divider>
+<ng-container *ngIf='isMass'>
+    <p class="rubric">To indicate the end of these readings, the reader acclaims:
+    </p>
+    <div class="celebrant">The word of the Lord. </div>
+    <p class="rubric">All reply: </p>
+    <div class="people">Thanks be to God.</div>
+</ng-container>
+
+<header class='section-header'>
+    <h3 class='mat-title section-title'>Responsorial Psalm</h3>
+    <span class='verse' id='UniversalisSunday_Mass_Ps.source'></span>
+</header>
 <p id='UniversalisSunday_Mass_Ps.text'></p>
 
-<h3 id='UniversalisSunday_Mass_R2.heading'></h3>
-<p id='UniversalisSunday_Mass_R2.source'></p>
-<mat-divider></mat-divider>
+<header class='section-header'>
+    <h3 class='mat-title section-title'>Second Reading</h3>
+    <span class='verse' id='UniversalisSunday_Mass_R2.source'></span>
+</header>
+
 <p id='UniversalisSunday_Mass_R2.text'></p>
 
-<p id='UniversalisSunday_Mass_GA.source'></p>
-<mat-divider></mat-divider>
+<ng-container *ngIf='isMass'>
+    <p class="rubric">To indicate the end of these readings, the reader acclaims:
+    </p>
+    <div class="celebrant">The word of the Lord. </div>
+    <p class="rubric">All reply: </p>
+    <div class="people">Thanks be to God.</div>
+</ng-container>
+
+<header class='section-header'>
+    <h3 class='mat-title section-title'>Gospel Acclamation</h3>
+    <span class='verse' id='UniversalisSunday_Mass_GA.source'></span>
+</header>
+
 <p id='UniversalisSunday_Mass_GA.text'></p>
 
-<h3 id='UniversalisSunday_Mass_G.heading'></h3>
-<p id='UniversalisSunday_Mass_G.source'></p>
-<mat-divider></mat-divider>
+<header class='section-header'>
+    <h3 class='mat-title section-title'>Gospel</h3>
+    <span class='verse' id='UniversalisSunday_Mass_G.source'></span>
+</header>
+
 <p id='UniversalisSunday_Mass_G.text'></p>
 
-<p id='UniversalisSunday_copyright.text'></p>
+<ng-container *ngIf='isMass'>
+    <p class="rubric">At the end of the Gospel, the Deacon, or the Priest, acclaims: </p>
+    <div class="celebrant">The Gospel of the Lord. </div>
+    <p class="rubric">All reply: </p>
+    <div class="people">Praise to you, Lord Jesus Christ. </div>
+    <p class="rubric">After the proclamation of the Gospel the congregation is seated.
+    </p>
+</ng-container>
+
+
+<!-- <p id='UniversalisSunday_copyright.text'></p> -->

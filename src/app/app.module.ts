@@ -7,16 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { SundayReadingsComponent } from './sunday-readings/sunday-readings.component';
 import { TodayReadingsComponent } from './today-readings/today-readings.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { AngularMaterialModule } from './material-theme/angular-material.module';
+import { OrderOfTheMassComponent } from './order-of-the-mass/order-of-the-mass.component';
+import { GraphQLModule } from './apollo/graphql.module';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SundayReadingsComponent,
-    TodayReadingsComponent
+    TodayReadingsComponent,
+    OrderOfTheMassComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +28,8 @@ import {MatDividerModule} from '@angular/material/divider';
     BrowserAnimationsModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    MatButtonToggleModule,
-    MatDividerModule
+    AngularMaterialModule,
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent]

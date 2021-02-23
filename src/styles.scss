@@ -1,4 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;700&display=swap");
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */
+$my-custom-primary: mat-palette($mat-deep-purple);
+$my-custom-accent: mat-palette($mat-pink, 100, 500, A100);
+$my-custom-warn: mat-palette($mat-lime);
+
+$my-custom-theme: mat-light-theme(
+  $my-custom-primary,
+  $my-custom-accent,
+  $my-custom-warn
+);
+
+@include angular-material-theme($my-custom-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: "Zilla Slab, serif",
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(24px, 32px, 500),
+);
+
+@include angular-material-typography($custom-typography);
+
+body {
+  margin: 0;
+}
+
+.verse {
+  text-align: right;
+  margin: 0;
+}
+
+.section-title {
+  margin: 0 !important;
+}
+
+$color: #333;
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba($color, 0.88);
+  padding: 0.5em 0;
+  margin: 1.5em 0;
+}
+
+.icon {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
