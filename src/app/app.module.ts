@@ -11,7 +11,6 @@ import { SundayReadingsComponent } from './sunday-readings/sunday-readings.compo
 import { TodayReadingsComponent } from './today-readings/today-readings.component';
 import { AngularMaterialModule } from './material-theme/angular-material.module';
 import { OrderOfTheMassComponent } from './order-of-the-mass/order-of-the-mass.component';
-import { GraphQLModule } from './apollo/graphql.module';
 import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
@@ -28,8 +27,7 @@ import { CalendarComponent } from './calendar/calendar.component';
     BrowserAnimationsModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AngularMaterialModule,
-    GraphQLModule
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
